@@ -1,8 +1,11 @@
+/* NPM modules */
 const express = require('express');
 const hbs     = require('hbs');
 
+/* Node core modules */
 const path    = require('path');
 
+/* Self written code */
 const geocode  = require('./utils/geocode');
 const forecast = require('./utils/forecast');
 

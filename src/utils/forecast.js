@@ -5,6 +5,12 @@ const request = require('request');
 const apiKey = '631194510ebcaf7de9804f550c1088fc';
 const flags  = '?units=si';
 
+/**
+ * Get the current weather at a specific position. 
+ * @param {number}   latitude  The latitude of the position.
+ * @param {number}   longitude The longitude of the position.
+ * @param {function} callback  The function to call when ready.
+ */
 const forecast = (latitude, longitude, callback) => {
     const url = `https://api.darksky.net/forecast/${apiKey}/${latitude},${longitude}${flags}`;
 
