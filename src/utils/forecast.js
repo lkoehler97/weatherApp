@@ -17,7 +17,10 @@ const forecast = (latitude, longitude, callback) => {
             const currentWeather = body.currently;
             const summary = body.daily.data[0].summary;
             const temperature = currentWeather.temperature;
-            callback(undefined, summary + ' It is currently ' + temperature + '°C outside. There is a ' + currentWeather.precipProbability + '% chance of rain.');
+            const low         = body.daily.data[0].temperatureLow;
+            const high        = body.daily.data[0].temperatureHigh;
+            callback(undefined, summary + ' It is currently ' + temperature + '°C outside. There is a ' + currentWeather.precipProbability + '% chance of rain. ' +
+                                'The temperature low for today is ' + low + '°C and the high is ' + high + '°C.');
         }
     });
 };
