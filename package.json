@@ -19,7 +19,7 @@
   "homepage": "https://github.com/lkoehler97/weatherApp#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "handlebars": "^4.2.0",
+    "handlebars": ">=4.3.0",
     "hbs": "^4.0.4",
     "request": "^2.88.0"
   },
